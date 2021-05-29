@@ -2,11 +2,13 @@
 let main = document.getElementById('main');
 for (let i = 0; i < 40; i++) {
     let space = document.createElement('p');
-
+    space.classList.add('space')
     if ((i%3) === 0) {
-        space.classList.add('blank');
+        space.classList.add('spaceGreen');
+    }else if ((i%7) === 0) {
+        space.classList.add('spaceYellow');
     }else{
-        space.classList.add('space');
+        space.classList.add('spacePurple')
     }
     
     main.append(space);
@@ -21,20 +23,28 @@ document.onkeydown = function move(e) {
     currentSpace.innerHTML = '';
     switch (e.keyCode ) {
         case 37:
-            console.log('left');
-            currentIndex-- ;
-            break;
+            if (currentIndex > 0) {
+                console.log('left');
+                currentIndex-- ;
+                break;
+            }
         case 38:
-            console.log('up');
-            currentIndex-=10;
-            break;
+            if (currentIndex > 10) {
+                console.log('up');
+                currentIndex-=10;
+                break;
+            }
         case 39:
-            console.log('right');
-            currentIndex++;
-            break;
+            if (currentIndex < 39) {
+                console.log('right');
+                currentIndex++;
+                break;
+            }
         case 40:
-            console.log('down');
-            currentIndex+=10;
+            if (currentIndex < 29) {
+                console.log('down');
+                currentIndex+=10;
+            }
     }
     currentSpace = main.children[currentIndex];
     currentSpace.innerHTML = 'x';
