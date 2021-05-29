@@ -52,17 +52,21 @@ document.onkeydown = function move(e) {
     }
     currentSpace = main.children[currentIndex];
     currentSpace.innerHTML = 'x';
-    console.log(currentIndex)
+    console.log(currentIndex);
 
     if (currentSpace.classList.contains('spaceYellow')) {
-        points+=3
+        points+=3;
     }else if (currentSpace.classList.contains('spaceGreen')) {
-        points++
+        points++;
     }else if (currentSpace.classList.contains('spaceRed')) {
-        points-=10
+        points-=10;
     }
     console.log(points)
     pointsDiv.innerHTML = "SCORE = " + points
+    if (points >= 30) {
+        alert('You win!!!11!!!one!!1!!')
+        points = 0;
+    }
 }
 
 
