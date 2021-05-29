@@ -62,7 +62,7 @@ document.onkeydown = function move(e) {
         points-=10
     }
     console.log(points)
-    pointsDiv.innerHTML = points
+    pointsDiv.innerHTML = "SCORE = " + points
 }
 
 
