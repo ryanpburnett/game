@@ -24,3 +24,8 @@
     height: 60px;
     border: 4px solid blue;
 }
+
+p {
+    font-size: 30px;
+    text-align: center;
+}
