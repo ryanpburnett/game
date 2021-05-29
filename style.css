@@ -1,6 +1,6 @@
 #main {
-    height: 70vh;
-    width: 70%;
+    height: 80vh;
+    width: 90%;
     align-content: auto;
     background-color: blue;
     margin: auto;
@@ -44,4 +44,5 @@
 p {
     font-size: 30px;
     text-align: center;
+    margin: 0;
 }
