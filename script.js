@@ -14,6 +14,8 @@ for (let i = 0; i < 40; i++) {
     main.append(space);
 }
 
+let points = 0
+let pointsDiv = document.getElementById('points')
 let currentIndex = 0;
 let currentSpace = main.children[currentIndex];
 currentSpace.innerHTML = 'x';
@@ -49,6 +51,14 @@ document.onkeydown = function move(e) {
     currentSpace = main.children[currentIndex];
     currentSpace.innerHTML = 'x';
     console.log(currentIndex)
+
+    if (currentSpace.classList.contains('spaceYellow')) {
+        points+=3
+    }else if (currentSpace.classList.contains('spaceGreen')) {
+        points++
+    }
+    console.log(points)
+    pointsDiv.innerHTML = points
 }
 
 
