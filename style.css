@@ -6,12 +6,21 @@
     margin: auto;
     border: 10px solid black;
     padding: 30px;
+
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
 }
 
 .space {
     background-color: blueviolet;
     width: 60px;
     height: 60px;
-    float: left;
     border: 4px solid black;
+}
+
+.blank {
+    width: 60px;
+    height: 60px;
+    border: 4px solid blue;
 }
