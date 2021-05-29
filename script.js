@@ -23,15 +23,18 @@ document.onkeydown = function move(e) {
         case 37:
             console.log('left');
             currentIndex-- ;
+            break;
         case 38:
             console.log('up');
-            currentIndex -10;
+            currentIndex-=10;
+            break;
         case 39:
             console.log('right');
             currentIndex++;
+            break;
         case 40:
             console.log('down');
-            currentIndex +10;
+            currentIndex+=10;
     }
     currentSpace = main.children[currentIndex];
     currentSpace.innerHTML = 'x';
