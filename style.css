@@ -30,6 +30,10 @@
     background-color: yellow;
 }
 
+.spaceRed {
+    background-color: red;
+}
+
 p {
     font-size: 30px;
     text-align: center;

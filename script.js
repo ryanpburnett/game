@@ -5,6 +5,8 @@ for (let i = 0; i < 40; i++) {
     space.classList.add('space')
     if ((i%3) === 0) {
         space.classList.add('spaceGreen');
+    }else if ((i%8) === 0) {
+        space.classList.add('spaceRed')
     }else if ((i%7) === 0) {
         space.classList.add('spaceYellow');
     }else{
@@ -56,6 +58,8 @@ document.onkeydown = function move(e) {
         points+=3
     }else if (currentSpace.classList.contains('spaceGreen')) {
         points++
+    }else if (currentSpace.classList.contains('spaceRed')) {
+        points-=10
     }
     console.log(points)
     pointsDiv.innerHTML = points
